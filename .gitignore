@@ -1,0 +1,19 @@
+# Dependencies / build (로컬 도구용 — 배포에 불필요)
+node_modules/
+dist/
+
+# Editor
+.vscode/
+.idea/
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# Logs
+*.log

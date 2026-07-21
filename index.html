@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NEWSEN — 나에게 맞는 VR 기기 추천 서비스. 취향과 목적에 딱 맞는 VR 기기를 찾아보세요." />
+  <meta name="theme-color" content="#15142A" />
+  <title>NEWSEN — 나에게 맞는 VR 기기 추천</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#products">본문으로 바로가기</a>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="page-container header-inner">
+      <a href="#" class="logo" aria-label="NEWSEN 홈으로 이동">
+        <span class="logo-badge">NS</span>
+        <span class="logo-text">NEWSEN</span>
+      </a>
+
+      <nav class="nav-desktop" role="navigation" aria-label="주요 메뉴">
+        <a href="#products" class="typo-body-m nav-link">VR 기기</a>
+        <a href="#levels" class="typo-body-m nav-link">레벨 가이드</a>
+        <a href="#gallery" class="typo-body-m nav-link">갤러리</a>
+        <a href="#faq" class="typo-body-m nav-link">FAQ</a>
+      </nav>
+
+      <a href="#products" class="btn-bounce nav-desktop header-cta typo-caption">기기 추천 받기</a>
+
+      <button
+        class="nav-mobile-btn"
+        id="menu-toggle"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg id="icon-close" class="is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav is-hidden" id="mobile-nav" role="navigation" aria-label="모바일 메뉴">
+      <a href="#products" class="typo-body-m mobile-nav-link">VR 기기</a>
+      <a href="#levels" class="typo-body-m mobile-nav-link">레벨 가이드</a>
+      <a href="#gallery" class="typo-body-m mobile-nav-link">갤러리</a>
+      <a href="#faq" class="typo-body-m mobile-nav-link">FAQ</a>
+      <a href="#products" class="btn-bounce typo-body-m mobile-nav-cta">기기 추천 받기</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Carousel -->
+    <section class="hero" aria-label="히어로 배너 캐러셀">
+      <div class="carousel-track" id="carousel-track" aria-live="polite">
+        <div class="carousel-slide" data-slide="0">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=1200&q=80" alt="나에게 맞는 VR, 어떻게 찾지?" class="carousel-bg" />
+          <div class="carousel-overlay"></div>
+          <div class="page-container carousel-content">
+            <span class="typo-overline badge-success">NEW ARRIVAL</span>
+            <h1 class="typo-h1 hero-title">나에게 맞는 VR,<br />어떻게 찾지?</h1>
+            <p class="typo-body-l hero-sub">내 취향과 목적에 딱 맞는 VR 기기를 빠르게 찾아보세요. 수백 가지 조합을 AI가 대신 비교합니다.</p>
+            <div class="hero-actions">
+              <a href="#products" class="btn-bounce typo-body-m btn-primary">기기 추천 받기</a>
+              <a href="#levels" class="btn-bounce typo-body-m btn-ghost">레벨 알아보기</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-slide="1" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=1200&q=80" alt="몰입감 그 이상의 경험을 시작하세요" class="carousel-bg" />
+          <div class="carousel-overlay"></div>
+          <div class="page-container carousel-content">
+            <span class="typo-overline badge-success">TRENDING</span>
+            <h1 class="typo-h1 hero-title">몰입감 그 이상의<br />경험을 시작하세요</h1>
+            <p class="typo-body-l hero-sub">입문부터 전문가 수준까지, 단계별로 최적화된 VR 환경을 제안해드립니다.</p>
+            <div class="hero-actions">
+              <a href="#products" class="btn-bounce typo-body-m btn-primary">기기 추천 받기</a>
+              <a href="#levels" class="btn-bounce typo-body-m btn-ghost">레벨 알아보기</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-slide="2" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1576633587382-13ddf37b1fc1?w=1200&q=80" alt="지금 주목받는 VR 기기 TOP 5" class="carousel-bg" />
+          <div class="carousel-overlay"></div>
+          <div class="page-container carousel-content">
+            <span class="typo-overline badge-success">EDITOR'S PICK</span>
+            <h1 class="typo-h1 hero-title">지금 주목받는<br />VR 기기 TOP 5</h1>
+            <p class="typo-body-l hero-sub">2025년 가장 인기 있는 VR 헤드셋과 주변 기기를 한눈에 확인해보세요.</p>
+            <div class="hero-actions">
+              <a href="#products" class="btn-bounce typo-body-m btn-primary">기기 추천 받기</a>
+              <a href="#levels" class="btn-bounce typo-body-m btn-ghost">레벨 알아보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls" role="group" aria-label="캐러셀 컨트롤" tabindex="0">
+        <button type="button" class="btn-bounce carousel-arrow carousel-prev" id="carousel-prev" aria-label="이전 슬라이드">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button type="button" class="btn-bounce carousel-arrow carousel-next" id="carousel-next" aria-label="다음 슬라이드">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="carousel-dots" role="tablist" aria-label="슬라이드 선택" id="carousel-dots">
+          <button type="button" role="tab" class="carousel-dot is-active" aria-selected="true" aria-label="슬라이드 1" data-index="0"></button>
+          <button type="button" role="tab" class="carousel-dot" aria-selected="false" aria-label="슬라이드 2" data-index="1"></button>
+          <button type="button" role="tab" class="carousel-dot" aria-selected="false" aria-label="슬라이드 3" data-index="2"></button>
+        </div>
+      </div>
+      <div class="carousel-counter" id="carousel-counter" aria-hidden="true">1 / 3</div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="section section-white" aria-labelledby="products-heading">
+      <div class="page-container">
+        <div class="section-header section-header-row">
+          <div>
+            <span class="typo-overline text-primary">BEST PICKS</span>
+            <h2 id="products-heading" class="typo-h2">처음 시작할 때<br />어떻게 골라요?</h2>
+          </div>
+          <a href="#levels" class="btn-bounce typo-caption btn-outline">전체 보기 →</a>
+        </div>
+
+        <div class="grid-products">
+          <article class="card-lift product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?w=600&q=80" alt="Meta Quest 3" loading="lazy" />
+              <span class="typo-caption product-tag" style="background:#17C7B7">입문 추천</span>
+            </div>
+            <div class="product-body">
+              <h3 class="typo-h3 product-name">Meta Quest 3</h3>
+              <p class="typo-body-m product-desc">가볍고 직관적인 입문자 최적 선택</p>
+              <div class="product-footer">
+                <span class="product-price">₩599,000</span>
+                <button type="button" class="btn-bounce typo-caption btn-primary btn-sm">자세히 보기</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-lift product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=600&q=80" alt="PlayStation VR2" loading="lazy" />
+              <span class="typo-caption product-tag" style="background:#4338CA">중급 추천</span>
+            </div>
+            <div class="product-body">
+              <h3 class="typo-h3 product-name">PlayStation VR2</h3>
+              <p class="typo-body-m product-desc">콘솔 게임 생태계와 완벽한 연동</p>
+              <div class="product-footer">
+                <span class="product-price">₩799,000</span>
+                <button type="button" class="btn-bounce typo-caption btn-primary btn-sm">자세히 보기</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-lift product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80" alt="Apple Vision Pro" loading="lazy" />
+              <span class="typo-caption product-tag" style="background:#17C7B7">전문가용</span>
+            </div>
+            <div class="product-body">
+              <h3 class="typo-h3 product-name">Apple Vision Pro</h3>
+              <p class="typo-body-m product-desc">공간 컴퓨팅의 새로운 패러다임</p>
+              <div class="product-footer">
+                <span class="product-price">₩4,499,000</span>
+                <button type="button" class="btn-bounce typo-caption btn-primary btn-sm">자세히 보기</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Device Levels -->
+    <section id="levels" class="section section-dark" aria-labelledby="levels-heading">
+      <div class="page-container">
+        <div class="section-header section-header-center">
+          <span class="typo-overline text-success">DEVICE LEVEL</span>
+          <h2 id="levels-heading" class="typo-h2 text-white">어떤 VR이<br />나에게 맞을까요?</h2>
+          <p class="typo-body-m levels-lead">경험 수준과 예산에 맞는 기기를 선택하면 훨씬 만족스러운 VR 경험을 시작할 수 있습니다.</p>
+        </div>
+
+        <div class="grid-levels">
+          <article class="card-lift level-card" style="border-color:#17C7B740">
+            <div class="level-top">
+              <span class="level-icon" aria-hidden="true">🎮</span>
+              <span class="typo-caption level-badge" style="background:#17C7B7">입문용</span>
+            </div>
+            <h3 class="typo-h3 text-white">Meta Quest 2 / 3</h3>
+            <p class="typo-body-m level-price" style="color:#17C7B7">30 ~ 60만원대</p>
+            <ul class="level-features">
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>PC 불필요, 독립 구동</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>가벼운 무게 (503g)</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>직관적인 컨트롤러</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>풍부한 콘텐츠 라이브러리</li>
+            </ul>
+            <button type="button" class="btn-bounce typo-body-m level-cta" style="background:#17C7B7">이 레벨로 추천 받기</button>
+          </article>
+
+          <article class="card-lift level-card" style="border-color:#4338CA40">
+            <div class="level-top">
+              <span class="level-icon" aria-hidden="true">🕹️</span>
+              <span class="typo-caption level-badge" style="background:#4338CA">중급자용</span>
+            </div>
+            <h3 class="typo-h3 text-white">PS VR2 / Index</h3>
+            <p class="typo-body-m level-price" style="color:#4338CA">60 ~ 120만원대</p>
+            <ul class="level-features">
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#4338CA" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4338CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>고해상도 OLED 패널</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#4338CA" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4338CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>정밀 아이트래킹</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#4338CA" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4338CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>햅틱 피드백 컨트롤러</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#4338CA" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4338CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>4K HDR 지원</li>
+            </ul>
+            <button type="button" class="btn-bounce typo-body-m level-cta" style="background:#4338CA">이 레벨로 추천 받기</button>
+          </article>
+
+          <article class="card-lift level-card" style="border-color:#17C7B740">
+            <div class="level-top">
+              <span class="level-icon" aria-hidden="true">🚀</span>
+              <span class="typo-caption level-badge" style="background:#17C7B7">전문가용</span>
+            </div>
+            <h3 class="typo-h3 text-white">Apple Vision Pro</h3>
+            <p class="typo-body-m level-price" style="color:#17C7B7">400만원 이상</p>
+            <ul class="level-features">
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>공간 컴퓨팅 플랫폼</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Micro-OLED 디스플레이</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>아이·손·음성 제어</li>
+              <li class="typo-body-m"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#17C7B7" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#17C7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>맥·아이폰 완전 연동</li>
+            </ul>
+            <button type="button" class="btn-bounce typo-body-m level-cta" style="background:#17C7B7">이 레벨로 추천 받기</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Banner -->
+    <section class="section section-secondary" aria-label="경험 기반 추천 배너">
+      <div class="page-container experience-inner">
+        <div class="experience-copy">
+          <span class="typo-overline text-primary">SMART MATCHING</span>
+          <h2 class="typo-h2">내 경험에 맞는<br />기기부터 맞춰보아요</h2>
+          <p class="typo-body-l experience-desc">간단한 3가지 질문으로 나에게 딱 맞는 VR 기기를 AI가 추천해드립니다.</p>
+          <a href="#products" class="btn-bounce typo-body-m btn-primary">지금 시작하기 →</a>
+        </div>
+        <div class="experience-cards">
+          <div class="card-lift experience-card">
+            <span class="experience-icon" aria-hidden="true">🎯</span>
+            <p class="typo-caption experience-label">입문용 기기</p>
+            <p class="typo-caption experience-meta">PC 불필요, 바로 시작</p>
+          </div>
+          <div class="card-lift experience-card">
+            <span class="experience-icon" aria-hidden="true">⚡</span>
+            <p class="typo-caption experience-label">고성능 기기</p>
+            <p class="typo-caption experience-meta">최상의 몰입감</p>
+          </div>
+          <div class="card-lift experience-card">
+            <span class="experience-icon" aria-hidden="true">🔋</span>
+            <p class="typo-caption experience-label">보조 배터리</p>
+            <p class="typo-caption experience-meta">장시간 플레이</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section section-white" aria-labelledby="gallery-heading">
+      <div class="page-container">
+        <div class="section-header">
+          <span class="typo-overline text-primary">GALLERY</span>
+          <h2 id="gallery-heading" class="typo-h2">알고 있는 것과<br />모르는 좋은 것을 구분해요</h2>
+        </div>
+
+        <div class="grid-gallery" id="gallery-grid">
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=1200&q=80" data-title="VR 체험 #1" aria-label="VR 체험 #1 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&q=80" alt="VR 체험 #1" loading="lazy" />
+            <span class="gallery-label typo-caption">VR 체험 #1</span>
+          </button>
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=1200&q=80" data-title="VR 헤드셋" aria-label="VR 헤드셋 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=600&q=80" alt="VR 헤드셋" loading="lazy" />
+            <span class="gallery-label typo-caption">VR 헤드셋</span>
+          </button>
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1576633587382-13ddf37b1fc1?w=1200&q=80" data-title="VR 게임" aria-label="VR 게임 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1576633587382-13ddf37b1fc1?w=600&q=80" alt="VR 게임" loading="lazy" />
+            <span class="gallery-label typo-caption">VR 게임</span>
+          </button>
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?w=1200&q=80" data-title="Meta Quest" aria-label="Meta Quest 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?w=600&q=80" alt="Meta Quest" loading="lazy" />
+            <span class="gallery-label typo-caption">Meta Quest</span>
+          </button>
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80" data-title="게이밍 셋업" aria-label="게이밍 셋업 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80" alt="게이밍 셋업" loading="lazy" />
+            <span class="gallery-label typo-caption">게이밍 셋업</span>
+          </button>
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80" data-title="게임 컨트롤러" aria-label="게임 컨트롤러 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=600&q=80" alt="게임 컨트롤러" loading="lazy" />
+            <span class="gallery-label typo-caption">게임 컨트롤러</span>
+          </button>
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?w=1200&q=80" data-title="게임 패드" aria-label="게임 패드 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?w=600&q=80" alt="게임 패드" loading="lazy" />
+            <span class="gallery-label typo-caption">게임 패드</span>
+          </button>
+          <button type="button" class="card-lift gallery-item" data-src="https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?w=1200&q=80" data-title="VR 플레이" aria-label="VR 플레이 이미지 크게 보기">
+            <img src="https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?w=600&q=80" alt="VR 플레이" loading="lazy" />
+            <span class="gallery-label typo-caption">VR 플레이</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-bg2" aria-labelledby="faq-heading">
+      <div class="page-container faq-container">
+        <div class="section-header section-header-center">
+          <span class="typo-overline text-primary">FAQ</span>
+          <h2 id="faq-heading" class="typo-h2">사전 질문이 없는 질문</h2>
+        </div>
+
+        <dl class="faq-list" id="faq-list">
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-body-0" id="faq-btn-0">
+                <span class="typo-body-m">PC가 없어도 VR을 즐길 수 있나요?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="faq-chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </dt>
+            <dd id="faq-body-0" class="faq-body" role="region" aria-labelledby="faq-btn-0">
+              <p class="typo-body-m">Meta Quest 2·3처럼 독립 구동형(Standalone) VR 기기는 PC 없이도 바로 사용할 수 있습니다. 다만 고사양 VR 경험을 원한다면 PC 연동 모델을 권장합니다.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-body-1" id="faq-btn-1">
+                <span class="typo-body-m">멀미가 심한데 VR을 해도 괜찮을까요?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="faq-chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </dt>
+            <dd id="faq-body-1" class="faq-body" role="region" aria-labelledby="faq-btn-1">
+              <p class="typo-body-m">VR 멀미는 개인차가 있습니다. 처음에는 5~10분 단위로 짧게 체험하고, 고주사율(90Hz 이상) 기기를 선택하면 멀미를 크게 줄일 수 있습니다.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-body-2" id="faq-btn-2">
+                <span class="typo-body-m">안경을 써도 VR 기기를 사용할 수 있나요?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="faq-chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </dt>
+            <dd id="faq-body-2" class="faq-body" role="region" aria-labelledby="faq-btn-2">
+              <p class="typo-body-m">대부분의 VR 헤드셋은 안경 착용자를 위한 공간을 제공하거나, 시력 조절 렌즈를 별도 판매합니다. 구매 전 해당 기기의 안경 호환 여부를 확인하세요.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-body-3" id="faq-btn-3">
+                <span class="typo-body-m">VR 게임 콘텐츠는 어떻게 구매하나요?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="faq-chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </dt>
+            <dd id="faq-body-3" class="faq-body" role="region" aria-labelledby="faq-btn-3">
+              <p class="typo-body-m">Meta Quest는 Meta Store, PS VR2는 PlayStation Store에서 구매할 수 있습니다. 매달 무료 게임도 제공되므로 꾸준히 확인해 보세요.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-body-4" id="faq-btn-4">
+                <span class="typo-body-m">배터리는 얼마나 지속되나요?</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="faq-chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </dt>
+            <dd id="faq-body-4" class="faq-body" role="region" aria-labelledby="faq-btn-4">
+              <p class="typo-body-m">기기에 따라 다르지만, 대부분의 독립 구동형 VR은 2~3시간 사용 가능합니다. 고사양 PC 연동 기기는 유선이라 배터리 걱정이 없습니다.</p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section section-primary" aria-labelledby="cta-heading">
+      <div class="page-container cta-container">
+        <h2 id="cta-heading" class="typo-h2 text-white">VR 최신 소식을<br />가장 먼저 받아보세요</h2>
+        <p class="typo-body-m cta-lead">신제품 출시, 할인 정보, 전문가 리뷰를 뉴스레터로 받아보세요.</p>
+
+        <div id="newsletter-success" class="newsletter-success is-hidden">
+          <span class="newsletter-emoji" aria-hidden="true">🎉</span>
+          <p class="typo-body-m">구독해주셔서 감사합니다!</p>
+        </div>
+
+        <form id="newsletter-form" class="newsletter-form">
+          <label for="newsletter-email" class="sr-only">이메일 주소</label>
+          <input
+            id="newsletter-email"
+            class="typo-body-m newsletter-input"
+            type="email"
+            name="email"
+            placeholder="이메일 주소를 입력하세요"
+            required
+          />
+          <button type="submit" class="btn-bounce typo-body-m newsletter-submit">구독하기</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="page-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo footer-logo">
+            <span class="logo-badge logo-badge-sm">NS</span>
+            <span class="logo-text logo-text-sm">NEWSEN</span>
+          </div>
+          <p class="typo-body-m footer-desc">나에게 맞는 VR을 찾는 가장 스마트한 방법. 취향과 예산에 맞는 기기를 AI가 추천해드립니다.</p>
+        </div>
+
+        <nav aria-label="서비스 링크" class="footer-nav">
+          <p class="typo-caption footer-nav-title">서비스</p>
+          <ul>
+            <li><a href="#" class="typo-body-m footer-link">VR 기기 추천</a></li>
+            <li><a href="#" class="typo-body-m footer-link">레벨 가이드</a></li>
+            <li><a href="#" class="typo-body-m footer-link">가격 비교</a></li>
+            <li><a href="#" class="typo-body-m footer-link">리뷰</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="회사 링크" class="footer-nav">
+          <p class="typo-caption footer-nav-title">회사</p>
+          <ul>
+            <li><a href="#" class="typo-body-m footer-link">소개</a></li>
+            <li><a href="#" class="typo-body-m footer-link">팀</a></li>
+            <li><a href="#" class="typo-body-m footer-link">블로그</a></li>
+            <li><a href="#" class="typo-body-m footer-link">채용</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="지원 링크" class="footer-nav">
+          <p class="typo-caption footer-nav-title">지원</p>
+          <ul>
+            <li><a href="#" class="typo-body-m footer-link">FAQ</a></li>
+            <li><a href="#" class="typo-body-m footer-link">고객센터</a></li>
+            <li><a href="#" class="typo-body-m footer-link">개인정보처리방침</a></li>
+            <li><a href="#" class="typo-body-m footer-link">이용약관</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="typo-caption">© 2025 NEWSEN. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="typo-caption footer-legal-link">개인정보처리방침</a>
+          <a href="#" class="typo-caption footer-legal-link">이용약관</a>
+          <a href="#" class="typo-caption footer-legal-link">쿠키 정책</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay is-hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="이미지 뷰어" hidden>
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="lightbox-close" aria-label="모달 닫기">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <img id="lightbox-img" src="" alt="" />
+      <div class="modal-caption">
+        <p class="typo-body-m" id="lightbox-title"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
